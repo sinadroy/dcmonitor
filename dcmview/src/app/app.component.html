@@ -1,0 +1,38 @@
+<div class="body-app">
+  <mat-toolbar color="primary" class="toolbar">
+    <mat-icon>warning</mat-icon>
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button> -->
+    <span class="title-app">Net Monitor</span>
+    <span class="example-spacer"></span>
+    <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button> -->
+    <button mat-mini-fab color="basic" class="example-icon" aria-label="Actualizar">
+    <!-- <button mat-stroked-button color="primary" aria-label="Actualizar"> -->
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <div class="container">
+    <mat-tab-group>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="example-tab-icon">menu</mat-icon>
+        </ng-template>
+        <div class="container-flex">
+          <app-device *ngFor="let device of deviceList" [device]="device"></app-device>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <!-- <div class="footer">
+    Developed by: Yordanis AL
+  </div> -->
+  <mat-toolbar color="primary" class="footer">
+    Developed by Yordanis AL
+  </mat-toolbar>
+
+</div>

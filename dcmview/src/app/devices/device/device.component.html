@@ -1,0 +1,27 @@
+<mat-card class="device-layout">
+    <mat-card-content class="card-content">
+        <mat-card-header>
+            <mat-card-subtitle>Device</mat-card-subtitle>
+            <mat-card-title>
+                <div class="service-detail">{{device.name}}</div>
+                <div *ngIf="device.status === 'ON'">
+                    <mat-icon color="primary">check</mat-icon>
+                </div>
+                <div *ngIf="device.status === 'OFF'">
+                    <mat-icon color="warn">close</mat-icon>
+                </div>
+            </mat-card-title>
+        </mat-card-header>
+        <div class="divider"></div>
+        <mat-list role="list" class="service-list">
+            <mat-list-item role="listitem" class="service-item" *ngFor="let service of device.services">
+                <div *ngIf="service.status === 'ON'">
+                    {{service.name}} <mat-icon color="primary">check</mat-icon>
+                </div>
+                <div *ngIf="service.status === 'OFF'">
+                    {{service.name}} <mat-icon color="warn">close</mat-icon>
+                </div>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>

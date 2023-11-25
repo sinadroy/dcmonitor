@@ -1,0 +1,44 @@
+.device-layout {
+    flex: 1; /* Las cajas ocuparán proporcionalmente el espacio disponible */
+    // background-color: #3498db;
+    // color: #fff;
+    padding: 10px;
+    margin: 5px;
+    // text-align: center;
+}
+
+.card-content {
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.service-detail {
+    flex: 1;
+    padding: 2px;
+    margin: 2px;
+}
+
+.service-status {
+    flex: 1;
+    padding: 2px;
+    margin: 2px;
+}
+
+.divider {
+    width: 1px;
+    background: var(--pill-accent);
+    margin-inline: 0.5rem;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-item {
+    flex: 1;
+}
